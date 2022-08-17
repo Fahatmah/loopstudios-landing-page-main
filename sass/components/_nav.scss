@@ -90,7 +90,7 @@ nav {
 
 @include md {
 	nav {
-		padding-block: 4rem;
+		padding-block: 3rem;
 
 		.toggle__menu-container {
 			width: $w-container;
@@ -115,10 +115,11 @@ nav {
 			align-items: flex-end;
 			justify-content: flex-end;
 			margin-inline-end: 5rem;
+			padding-inline: 0;
 
 			.mobile-links {
 				@include center;
-				gap: 1.8rem;
+				gap: 2.3rem;
 
 				li {
 					@include center;
