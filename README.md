@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
--  Solution URL: [Loopstudios Landing Page]()
+-  Solution URL: [Loopstudios Landing Page](https://github.com/Fahatmah/loopstudios-landing-page-main)
 -  Live Site URL: [Loopstudios Landing Page]()
 
 ### Built with
