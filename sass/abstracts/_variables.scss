@@ -1,0 +1,23 @@
+$alata: 'Alata', sans-serif;
+$josefin-sans: 'Josefin Sans', sans-serif;
+
+$fn-light: 300;
+$fn-reg: 400;
+$fs-h1: clamp(2rem, 2vw + 1.3rem, 3.3rem);
+
+$light-clr: hsl(0, 0%, 100%);
+$black-clr: hsl(0, 0%, 0%);
+$dark-gray-clr: hsl(0, 0%, 55%);
+$very-dark-gray-clr: hsl(0, 0%, 41%);
+
+$menu-clr: $light-clr;
+$header-clr: $light-clr;
+$h1-clr: $black-clr;
+$h2-clr: $black-clr;
+
+$w-container: min(100% - 3rem, 70rem);
+$mx-container: min(100% - 2.5rem);
+$inn-container: min(100% - 3.5rem);
+$pdd-x: 1.5rem;
+$mrgn-x: $pdd-x;
+$outline: 1px solid yellow;

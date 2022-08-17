@@ -1,0 +1,85 @@
+@use '../abstracts' as *;
+
+header {
+	position: relative;
+	width: 100%;
+	height: 40rem;
+	background: url(/assets/mobile/image-hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	@include center;
+
+	.container {
+		margin-inline: auto;
+		padding: 1.1rem;
+		transform: translateY(0.6rem);
+		outline: 2px solid $light-clr;
+		width: min(84%, $inn-container, 30rem);
+
+		h1 {
+			font-size: clamp(2rem, 2vw + 2rem, 8rem);
+			line-height: 1;
+			color: $light-clr;
+		}
+	}
+}
+
+@include sm {
+	.container h1 {
+		text-align: center;
+	}
+}
+
+@include md {
+	header {
+		position: relative;
+		background: url(/assets/desktop/image-hero.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top 0 left -25rem;
+		z-index: 10;
+		height: 40.5rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-color: rgba(0, 0, 0, 0.411);
+		}
+
+		.header-wrapper {
+			position: relative;
+			top: 17%;
+			transform: translateY(-17%);
+			width: min(90%, $w-container);
+			margin-inline: auto;
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+
+			.container {
+				margin: 0;
+				width: 58.5%;
+				padding-block: 2rem;
+				padding-inline: calc(0.9rem + $pdd-x);
+				transform: translateY(-1.3rem);
+
+				h1 {
+					font-size: min(4.470rem, 6vw);
+					text-align: left;
+					// line-height: 1.1;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+}
+
+@include x-md {
+	header {
+		background-position: center;
+	}
+}

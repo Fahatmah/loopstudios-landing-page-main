@@ -1,0 +1,68 @@
+@use '../abstracts' as *;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	outline: 0;
+	border: 0;
+}
+
+body {
+	font-size: 15px;
+	position: relative;
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+	font-family: $josefin-sans;
+	font-weight: $fn-reg;
+	text-transform: uppercase;
+}
+
+a {
+	display: inline-block;
+	color: $light-clr;
+}
+
+p {
+	font-family: $alata;
+	font-weight: $fn-light;
+}
+
+button {
+	cursor: pointer;
+}
+
+.desktop-view {
+	display: none;
+}
+
+.mobile-view {
+	display: block;
+}
+
+.logo {
+	width: max(8.5rem, 73% + 4vw);
+	align-self: center;
+	justify-self: center;
+}
+
+img {
+	width: 100%;
+}
+
+.section {
+	width: $w-container;
+	margin-inline: auto;
+
+	h1 {
+		font-weight: 500;
+	}
+}

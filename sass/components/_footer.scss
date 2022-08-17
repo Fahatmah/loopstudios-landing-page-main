@@ -1,0 +1,171 @@
+@use '../abstracts' as *;
+
+.loopstudios__footer {
+	background-color: $black-clr;
+
+	&_container {
+		position: relative;
+		@include center;
+		flex-direction: column;
+		gap: 2.8rem;
+		padding-block: 3.35rem;
+
+		[aria-label='Loopstudios Logo'] {
+			text-align: center;
+		}
+
+		.loopstudios__links {
+			width: $w-container;
+			margin-inline: auto;
+			@include center;
+			position: relative;
+			flex-direction: column;
+			gap: 1.4rem;
+			margin-top: 1.8rem;
+
+			li a {
+				font-family: $alata;
+
+				&::after {
+					transform: translate(-50%, 1.5rem);
+				}
+			}
+		}
+
+		.loopstudios__social-media {
+			@include center;
+			gap: 1rem;
+
+			li a {
+				position: relative;
+
+				&::after {
+					bottom: -0.3rem;
+					transform: translateX(-50%);
+				}
+
+				img {
+					width: 1.4rem;
+				}
+			}
+		}
+
+		li a::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			width: 0;
+			height: 0.13rem;
+			background-color: $light-clr;
+			transition: 0.3s ease-in-out;
+		}
+
+		li a:hover::after {
+			width: 1.25rem;
+		}
+
+		h3 {
+			color: $very-dark-gray-clr;
+			font-family: $alata;
+			margin-top: 1.2rem;
+			font-size: 0.8rem;
+			text-transform: none;
+		}
+
+		.attribution {
+			position: absolute;
+			bottom: 0.25rem;
+			left: 50%;
+			transform: translate(-50%, -0.25rem);
+			font-family: $alata;
+			color: $dark-gray-clr;
+			letter-spacing: 1px;
+			font-size: 11px;
+			text-align: center;
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+}
+@include md {
+	.loopstudios__footer {
+		&_container {
+			justify-content: space-between;
+			flex-direction: row;
+			width: $w-container;
+			margin-inline: auto;
+			padding-block: 2.7rem;
+
+			.footer-gr1 {
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				flex-direction: column;
+				gap: 1.5rem;
+
+				[aria-label='Loopstudios Logo'] {
+					text-align: left;
+
+					.logo {
+						width: 9rem;
+					}
+				}
+
+				.loopstudios__links {
+					flex-direction: row;
+					margin-top: 0;
+					gap: 1.850rem;
+
+					li a {
+						position: relative;
+						font-size: 0.950rem;
+					}
+
+					li a::after {
+						display: none;
+					}
+
+					li a::before {
+						content: '';
+						position: absolute;
+						bottom: -0.5rem;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 0;
+						height: 0.13rem;
+						background-color: $light-clr;
+						transition: 0.3s ease-in-out;
+					}
+
+					li a:hover::before {
+						width: 1.25rem;
+					}
+				}
+			}
+
+			.footer-gr2 {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				justify-content: flex-end;
+
+				.loopstudios__social-media {
+					display: flex;
+					align-items: flex-end;
+					justify-content: flex-end;
+					margin: 0;
+
+					img {
+						width: 1.6rem;
+					}
+				}
+			}
+
+			h3 {
+				font-size: 1rem;
+			}
+		}
+	}
+}

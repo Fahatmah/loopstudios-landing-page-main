@@ -1,0 +1,90 @@
+@use '../abstracts' as *;
+@use '../abstracts/boilerplates';
+
+.section.one {
+	@include center;
+	flex-direction: column;
+	margin-block: 6.1rem;
+
+	.image-wrapper {
+		@include center;
+		flex-direction: column;
+		width: 100%;
+		margin-inline: auto;
+
+		.mobile-view {
+			max-width: 30rem;
+		}
+
+		// img {
+		// 	width: 100%;
+		// }
+	}
+
+	.interactive-prgrph {
+		margin-top: 3rem;
+		text-align: center;
+		padding-inline: calc(0.2rem + $pdd-x);
+
+		h1 {
+			font-size: $fs-h1;
+		}
+
+		p {
+			margin-top: 1rem;
+			color: $dark-gray-clr;
+			line-height: 1.6;
+		}
+	}
+}
+@include md {
+	.section.one {
+		margin-block-start: 9.5rem;
+		margin-block-end: 12.5rem;
+
+		.image-wrapper {
+			.mobile-view {
+				display: none;
+			}
+
+			.desktop-view {
+				display: flex;
+				width: 30rem;
+			}
+		}
+	}
+}
+@include lg {
+	.section.one {
+		display: grid;
+		grid-template-columns: repeat(14, 1fr);
+
+		.image-wrapper {
+			grid-column: 1 / 10;
+			grid-row: 1 / 4;
+
+			.desktop-view {
+				display: flex;
+				width: max(45rem, 30vw);
+			}
+		}
+
+		.interactive-prgrph {
+			grid-column: 8 / -1;
+			grid-row: 2 / 4;
+			align-self: center;
+			background-color: $light-clr;
+			margin-top: 0;
+			padding-block-start: 6rem;
+			padding-inline-start: 6rem;
+			padding-inline-end: 0;
+			text-align: left;
+			width: 100%;
+			max-width: 35rem;
+
+			p {
+				margin-top: 1.5rem;
+			}
+		}
+	}
+}

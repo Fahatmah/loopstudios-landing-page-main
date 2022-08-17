@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.see-all-btn {
+	position: relative;
+	padding: 0.6rem;
+	width: 9.5rem;
+	background-color: transparent;
+	border: 1px solid $black-clr;
+	font-size: 0.9rem;
+	font-family: $alata;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-top: 2rem;
+	transition: 0.3s ease-in-out;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		z-index: -1;
+		background-color: $black-clr;
+		transition: 0.2s ease-in-out;
+		transition-delay: 150ms;
+	}
+
+	&:hover {
+		color: $light-clr;
+
+		&::before {
+			width: 100%;
+		}
+	}
+}
+
+@include lg {
+	.see-all-btn {
+		margin-top: 0;
+		@include center;
+	}
+}
